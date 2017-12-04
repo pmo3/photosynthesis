@@ -1,0 +1,7 @@
+development:
+  adapter: sqlite3
+  database: photosynthesis_development.db
+
+test:
+  adapter: sqlite3
+  database: photosynthesis_test.db
