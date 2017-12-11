@@ -11,6 +11,7 @@ gem "sqlite3"
 gem "bcrypt", '~> 3.1.7'
 gem 'warden', '~> 1.2.6'
 gem 'byebug'
+gem 'rpi_gpio'
 
 group :development do
   gem "compass"
@@ -29,4 +30,5 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1', require: false
   gem 'factory_bot'
   gem 'faker'
+  gem 'capybara'
 end

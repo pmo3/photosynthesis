@@ -8,6 +8,7 @@ require File.expand_path '../../app.rb', __FILE__
 require 'shoulda-matchers'
 require 'faker'
 require 'factory_bot'
+require 'capybara/rspec'
 
 module RSpecMixin
   include Rack::Test::Methods
@@ -55,4 +56,8 @@ RSpec.configure do |config|
   config.after(:suite) do
     Warden.test_reset!
   end
+
+  config.include Capybara::DSL
+  config.include Capybara::RSpecMatchers
+  Capybara.app = Photosynthesis::App
 end
