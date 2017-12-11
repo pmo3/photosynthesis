@@ -11,7 +11,6 @@ gem "sqlite3"
 gem "bcrypt", '~> 3.1.7'
 gem 'warden', '~> 1.2.6'
 gem 'byebug'
-gem 'rpi_gpio'
 
 group :development do
   gem "compass"
@@ -22,6 +21,7 @@ group :development do
 end
 
 group :production do
+  gem 'rpi_gpio'
 end
 
 group :test do
