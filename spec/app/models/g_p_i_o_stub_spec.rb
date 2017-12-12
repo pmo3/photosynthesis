@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe GPIOStub, type: :model do
 
-  subject { GPIOStub.new }
+  subject { GPIOStub }
 
   context 'sanity check that required methods exist' do
     before do

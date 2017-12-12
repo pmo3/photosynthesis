@@ -13,31 +13,31 @@ METHODS REQUIRED:
 
 class GPIOStub
 
-  def set_numbering(type)
+  def self.set_numbering(type)
     type.is_a?(Symbol) && [:bcm, :board].include?(type)
   end
 
-  def setup(pin_num, type)
+  def self.setup(pin_num, type)
     pin_num.is_a?(Integer) && type.is_a?(Hash) && [:input, :output].include?(type[:as])
   end
 
-  def high?(pin_num)
+  def self.high?(pin_num)
     pin_num.is_a? Integer
   end
 
-  def low?(pin_num)
+  def self.low?(pin_num)
     pin_num.is_a? Integer
   end
 
-  def set_low(pin_num)
+  def self.set_low(pin_num)
     pin_num.is_a? Integer
   end
 
-  def set_high(pin_num)
+  def self.set_high(pin_num)
     pin_num.is_a? Integer
   end
 
-  def clean_up
+  def self.clean_up
     true
   end
 end
