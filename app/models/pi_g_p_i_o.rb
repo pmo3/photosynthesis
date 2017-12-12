@@ -1,6 +1,6 @@
 class PiGPIO
-  ACTIVE_PINS = nil
-  NUMBERING = :board.freeze
+  ACTIVE_PINS = [2]
+  NUMBERING = :bcm.freeze
 
   def initialize
     gpio_config = YAML.load(File.read('config/gpio.yml'))

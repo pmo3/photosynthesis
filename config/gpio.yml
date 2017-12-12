@@ -1,3 +1,4 @@
 development: GPIOStub
+test: GPIOStub
 
 production: RPi::GPIO
